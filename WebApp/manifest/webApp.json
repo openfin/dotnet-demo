@@ -1,0 +1,18 @@
+{
+  "devtools_port": 9090,
+  "startup_app": {
+    "name": "Deep Thought - Order Calculator",
+    "description": "OpenFin POC",
+    "uuid": "3A9F1CA1-E453-4BE3-9789-4880F372791D",
+    "mainWindowOptions": {
+      "autoShow": true,
+      "url": "http://localhost:56100/",
+      "defaultHeight": 700,
+      "defaultWidth":  760
+    }
+  },
+  "runtime": {
+    "arguments": "",
+    "version": "beta"
+  }
+}

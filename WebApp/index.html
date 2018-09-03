@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Deep Thought - Order Calculator</title>
+	<meta charset="utf-8" />
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <script src="js/deep-thought.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/openfin.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Deep Thought Calculator</h1>
+            <div id="modelInputs">
+                <h2>Model Inputs</h2>
+                <form><fieldset id="inputs">
+                    <label for="inputA">Input A</label>
+                    <input type="range" id="inputA" />
+                    <label for="inputB">Input B</label>
+                    <input type="range" id="inputB" />
+                    <label for="inputC">Input C</label>
+                    <input type="range" id="inputC" />
+                </fieldset></form>
+            </div>
+            <div id="modelResults">
+                <h2>Model Results</h2>
+                <div id="thinkingSpinner"><img src="img/spinner.gif" height="32" width="32" /> Thinking...</div>
+                <form id="results" class="form-horizontal invisible">
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Ticker:</label>
+                        <span id="resultsTicker" class="form-control-static col-sm"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Action:</label>
+                        <span id="resultsAction" class="form-control-static col-sm"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Order Type:</label>
+                        <span id="resultsType" class="form-control-static col-sm"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Shares:</label>
+                        <span id="resultsShares" class="form-control-static col-sm"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3">Limit:</label>
+                        <span id="resultsLimit" class="form-control-static col-sm"></span>
+                    </div>
+                    <br />
+                    <div id="openFinFeatures" class="invisible">
+                        <button type="button" id="executeOrderButton" class="btn btn-primary" disabled>Execute Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
