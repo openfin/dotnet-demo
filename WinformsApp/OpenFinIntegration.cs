@@ -15,25 +15,25 @@ namespace WinformsApp
 
         private const string WebAppManifest = "http://localhost:56100/manifest/webApp.json";      
 
-        private RuntimeOptions _webAppOptions;
-        private RuntimeOptions _dotNetOptions;
+        private readonly RuntimeOptions _webAppOptions;
+        private readonly Runtime _runtime;
+        private readonly Application _openfinApp;
 
-        private Runtime _runtime;
-        private Application _openfinApp;
+        public RuntimeOptions DotNetOptions { get; }
 
         public OpenFinIntegration()
         {
             _webAppOptions = RuntimeOptions.LoadManifest(new Uri(WebAppManifest));
-            _dotNetOptions = new RuntimeOptions()
+            DotNetOptions = new RuntimeOptions()
             {
                 UUID = DotNetUuid,
                 Version = _webAppOptions.Version,
                 RemoteDevToolsPort = _webAppOptions.RemoteDevToolsPort
             };
 
-            _dotNetOptions.UUID = DotNetUuid;
+            DotNetOptions.UUID = DotNetUuid;
 
-            _runtime = Runtime.GetRuntimeInstance(_dotNetOptions);
+            _runtime = Runtime.GetRuntimeInstance(DotNetOptions);
             _openfinApp = _runtime.WrapApplication(_webAppOptions.StartupApplicationOptions.UUID);
 
             _runtime.Disconnected += Runtime_Disconnected;
