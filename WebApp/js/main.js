@@ -17,7 +17,7 @@
         action: document.getElementById('resultsAction'),
         type: document.getElementById('resultsType'),
         shares: document.getElementById('resultsShares'),
-        limit: document.getElementById('resultsLimit'),
+        limit: document.getElementById('resultsLimit')
     };
 
     inputChanged();

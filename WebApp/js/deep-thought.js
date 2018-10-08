@@ -1,14 +1,14 @@
 ﻿// A mock market-analysis tool with a penchant for the number 42
 
 class DeepThought {
-    runMarketAnalysis(inputA, inputB, inputC) {
+    runMarketAnalysis() {
         let analysisFunc = this.runMarketAnalysisSync;
-        return new Promise((rs, rj) => {
-            setTimeout(rs(analysisFunc(inputA, inputB, inputC)), 4000);
+        return new Promise((rs) => {
+            setTimeout(rs(analysisFunc()), 4000);
         });
     }
 
-    runMarketAnalysisSync(inputA, inputB, inputC) {
+    runMarketAnalysisSync() {
         // Okay so the inputs are never used, it's a mock-tool after all!
 
         let orderType = [
@@ -45,7 +45,7 @@ class DeepThought {
             orderAction,
             security,
             shares,
-            limit: orderType == 'Limit Order' ? limit : undefined
-        }
+            limit: orderType === 'Limit Order' ? limit : undefined
+        };
     }
 }
