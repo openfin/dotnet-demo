@@ -13,18 +13,13 @@ The demo consists of two applications one being a winforms application which wou
 ## Run Locally
 
 ```
-To run this hit F5 or Start in the top bar within Visual Studio
-Hit the run button of F5 to run the ribbon code
+To run the application hit F5 on the keyboard or start in visual studio
 ```
 
 # Disclaimers
 
 This is an open source project and all are encouraged to contribute.
 
-# License
-
-This project has an XXX license.
-
 # Support
 
-Please enter an issue in the repo for any questions or problems
+Please raise an issue in the repo for any questions or problems
