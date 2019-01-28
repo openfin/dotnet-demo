@@ -20,6 +20,11 @@ To run the application hit F5 on the keyboard or start in visual studio
 
 This is an open source project and all are encouraged to contribute.
 
+# License
+MIT
+
+The code in this repository is covered by the included license.  If you run this code, it may call on the OpenFin RVM or OpenFin Runtime, which are subject to OpenFin’s [Developer License](https://openfin.co/developer-agreement/). If you have questions, please contact support@openfin.co
+
 # Support
 
 Please raise an issue in the repo for any questions or problems
